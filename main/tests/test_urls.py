@@ -16,7 +16,7 @@ class CustomerAPITest(APITestCase):
 
     def test_create_customer(self):
         url = reverse('main:customer-list')
-        response = self.client.post(url,{'name':'branson', 'code':'fdjf2'} )
+        response = self.client.post(url,{'name':'branson', 'code':'jfjfd'} )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     def test_customer_detail(self):
