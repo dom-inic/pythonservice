@@ -16,8 +16,8 @@ class CustomerAPITest(APITestCase):
 
     def test_create_customer(self):
         url = reverse('main:customer-list')
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        response = self.client.post(url,{'name':'branson', 'code':'fdjf2'} )
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     def test_customer_detail(self):
         url = reverse('main:customer-detail', args=[1])
@@ -51,8 +51,8 @@ class OrderAPITest(APITestCase):
 
     def test_order_create(self):
         url = reverse('main:order-list')
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        response = self.client.post(url, {'item': 'iphone', 'amount':1000, 'time':datetime.datetime.now()})
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     def test_order_detail(self):
         url = reverse('main:order-detail', args=[1])
