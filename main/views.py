@@ -2,7 +2,7 @@ from . serializers import CustomerSerializer, OrderSerializer
 from . models import Customer, Order
 from rest_framework import generics
 
-class CustomerList(generics.ListAPIView):
+class CustomerList(generics.ListCreateAPIView):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
 
