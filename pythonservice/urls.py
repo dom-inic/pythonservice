@@ -20,4 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
+    # path('openid/', include('oidc_provider.urls', namespace='oidc_provider')),
+    path('oauth/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+    path('accounts/', include('accounts.urls')),
 ]
