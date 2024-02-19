@@ -15,7 +15,7 @@ jobs:
   test:
     runs-on: ubuntu-20.04
 
-    container: python:3.9.6
+    container: python:3.11.6
 
     services:
       redis:
