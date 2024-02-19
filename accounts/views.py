@@ -5,11 +5,11 @@ from rest_framework import generics
 from django.contrib.auth.models import User
 from . serializers import UserSerializer
 
-class ProtectedResourceView(APIView):
-    permission_classes = [IsAuthenticated]
+# class ProtectedResourceView(APIView):
+#     permission_classes = [IsAuthenticated]
 
-    def get(self, request):
-        return Response({"message": "This is a protected resource!"})
+#     def get(self, request):
+#         return Response({"message": "This is a protected resource!"})
     
 class UserList(generics.ListAPIView):
     queryset = User.objects.all()

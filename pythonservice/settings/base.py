@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
 
     'rest_framework',
-    'oidc_provider',
     'oauth2_provider',
 ]
 
