@@ -2,7 +2,7 @@
 <h3 align="center">pythonservice</h3>
 
     
-    <br />
+   
 
 This python service utilizes django and django rest framework to build a REST api service that can be accessed by different clients. It also employs Oauth2 using django-oauth-toolkit 
 library for much a secure authentication protocol. Various unit tests and integration tests have been implemented to ensure the code implemented works as its suppost to. For CI/CD 
@@ -68,7 +68,6 @@ make sure you have redis installed on your machine
 celery -A pythonservice worker -l info
 ``` 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
